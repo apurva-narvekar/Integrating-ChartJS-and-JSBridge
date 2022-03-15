@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+    <link rel="stylesheet" href="css/index.css" />
+    <script type="text/javascript" src="js/mt.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+</head>
+
+<body>
+
+    <h1 id="heading">Mt.JS Testing</h1>
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <canvas id="myChart" style="width:100%;max-width:600px;height:400px;"></canvas>
+
+    <script>
+        let BarData;
+        var Type="TEST";
+ 
+        //listen for event triggered from the controller
+
+        Mt.App.addEventListener('doBrowserStuff', function (data) {
+   
+            BarData = data.ChartData;
+            Type = data.Type;
+        });
+
+        //setTimeout is used for synchronous execution of the code
+
+        setTimeout(CallChartGraph, 1000);
+        
+        //fire event from html page
+        Mt.App.fireEvent('doNativeStuff', {
+            msg: 'FirstLoad',
+            question: 'Did you get this message?',
+            extra: 'You can send more then one property back',
+            answer: 42
+        });
+        
+        
+        //////////////////////////////////////////////////
+        //Using chart.js
+
+        function CallChartGraph() {
+            alert("In chart graph:" + Type);
+            document.getElementById("heading").innerHTML = Type;
+            let myChart = document.getElementById("myChart").getContext("2d");
+            try {
+                let drawChart = new Chart(myChart, {
+                    type: Type,
+                    data: {
+                        labels: ["Italy", "France", "Spain", "USA", "Argentina"],
+                        datasets: [{
+                            backgroundColor: ["red", "green", "blue", "orange", "brown"],
+                            data: BarData,
+                            label: "Wine Production"
+                        }]
+                    },
+                    options: {
+                        legend: {
+                            display: true
+                        },
+                        title: {
+                            display: true,
+                            text: "World Wine Production 2018"
+                        },
+                        maintainAspectRatio: false,
+                        scales: {
+                            xAxes: [{
+                                
+                                ticks: {
+                                    beginAtZero:true
+                                }
+                            }],
+                            
+                            
+                        }
+                    }
+                });
+                alert("Plotted chart");
+            }
+            catch (ex) {
+                alert("Error:" + ex.message);
+            }
+
+        }
+
+</script>
+</body>
+</html>
