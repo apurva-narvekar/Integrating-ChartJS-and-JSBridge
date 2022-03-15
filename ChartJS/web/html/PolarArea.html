@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+</head>
+<body>
+<canvas id="polarPlot" style="width:100%; max-width:600px;height:500px;"></canvas>
+
+ <script>
+     let myChart = document.getElementById("polarPlot").getContext("2d");
+     new Chart(myChart, {
+         type: "polarArea",
+         data: {
+             labels: ["Red", "Green", "Blue", "Yellow", "Black"],
+             datasets: [{
+                 label: "Color Dataset",
+                 data: [45, 56, 34, 66, 50],
+                 backgroundColor:["red","green","blue","yellow","black"]
+             }]
+         },
+         options: {
+             title: {
+                 display: true,
+                 text: "Polar plot for colors",
+             },
+             maintainAspectRatio: false,
+             legend: {
+                 display:true
+             }
+         }
+     });
+ </script>
+</body>
+</html>

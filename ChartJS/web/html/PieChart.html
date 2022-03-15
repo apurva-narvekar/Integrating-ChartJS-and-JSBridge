@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+</head>
+<body>
+<h1>Pie Chart</h1>
+    <div>
+        <canvas id="PieChart"></canvas>
+    </div>
+    <script>
+        let myChart = document.getElementById("PieChart").getContext("2d");
+
+        new Chart(myChart, {
+
+            type: "pie",
+            data: {
+                labels: ["Delhi", "Mumbai", "Chennai", "Kolkata", "Lucknow"],
+                datasets: [{
+                    data: [44.5, 23.5, 65.7, 90.7, 34.5],
+                    label: "Population in million",
+                    backgroundColor: ["#b91d47", "#00aba9", "#2b5797", "#e8c3b9", "#1e7145"]
+  
+                }]
+            },
+            options: {
+                title: {
+                    display: true,
+                    text:"Population in Indian cities (2022)"
+                }
+
+            }
+
+        })
+    </script>
+</body>
+</html>
