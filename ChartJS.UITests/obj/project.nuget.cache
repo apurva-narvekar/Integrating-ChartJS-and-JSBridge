@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "YScRDvDOMcxQnV1sr3cnYQI0LP5WrDEVTF2NjuzmOknHsbF3qacIHHb0/4HgX827rwCe6CftTF8/phovSpIVng==",
+  "success": true,
+  "projectFilePath": "/Users/10684396/Projects/ChartJS/ChartJS.UITests/ChartJS.UITests.csproj",
+  "expectedPackageFiles": [
+    "/Users/10684396/.nuget/packages/nunit/3.12.0/nunit.3.12.0.nupkg.sha512",
+    "/Users/10684396/.nuget/packages/xamarin.uitest/3.0.5/xamarin.uitest.3.0.5.nupkg.sha512"
+  ],
+  "logs": []
+}

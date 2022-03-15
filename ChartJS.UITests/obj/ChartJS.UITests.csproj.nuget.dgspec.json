@@ -1,0 +1,59 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/10684396/Projects/ChartJS/ChartJS.UITests/ChartJS.UITests.csproj": {}
+  },
+  "projects": {
+    "/Users/10684396/Projects/ChartJS/ChartJS.UITests/ChartJS.UITests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/10684396/Projects/ChartJS/ChartJS.UITests/ChartJS.UITests.csproj",
+        "projectName": "ChartJS.UITests",
+        "projectPath": "/Users/10684396/Projects/ChartJS/ChartJS.UITests/ChartJS.UITests.csproj",
+        "packagesPath": "/Users/10684396/.nuget/packages/",
+        "outputPath": "/Users/10684396/Projects/ChartJS/ChartJS.UITests/obj/",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "configFilePaths": [
+          "/Users/10684396/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net47"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net47": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net47": {
+          "dependencies": {
+            "NUnit": {
+              "target": "Package",
+              "version": "[3.12.0, )"
+            },
+            "Xamarin.UITest": {
+              "target": "Package",
+              "version": "[3.0.5, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    }
+  }
+}
